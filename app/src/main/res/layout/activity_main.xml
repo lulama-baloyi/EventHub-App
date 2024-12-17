@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/radiant"
+    tools:context=".MainActivity">
+
+    <!-- Centered Logo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+
+        <!-- Logo ImageView -->
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="200dp"
+            android:layout_height="192dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logos" />
+
+        <!-- Slogan Text -->
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/txtSLogan"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="@string/sLogan"/>
+    </LinearLayout>
+
+    <!-- Bottom Buttons (Sign Up and Sign In) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Admin Login"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            app:buttonColor="@color/btnSignUp"
+            android:shadowColor="@color/black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"
+            app:cornerRadius="4dp"/>
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Sign In"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            app:buttonColor="@color/btnLogin"
+            android:shadowColor="@color/black"
+            app:shadowEnabled="true"
+            app:shadowHeight="5dp"
+            app:cornerRadius="4dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

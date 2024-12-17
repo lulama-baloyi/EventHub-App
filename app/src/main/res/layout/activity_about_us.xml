@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/radiant"
+    tools:context=".AboutUs">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:gravity="center"> <!-- Center all contents -->
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/txtAboutUs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Us"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/black"/>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to our Event Booking App! Here, you can easily book your favorite events, manage your bookings, and enjoy a seamless experience."
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <!-- Team Member Images -->
+        <LinearLayout
+            android:id="@+id/memberImagesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/member1Image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/logos"
+            android:layout_margin="8dp"/>
+
+            <ImageView
+                android:id="@+id/member2Image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/logos"
+            android:layout_margin="8dp"/>
+
+            <ImageView
+                android:id="@+id/member3Image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/logos"
+            android:layout_margin="8dp"/>
+        </LinearLayout>
+
+        <!-- Team Member Names -->
+        <LinearLayout
+            android:id="@+id/memberNamesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eneto"
+                android:textSize="14sp"
+                android:layout_margin="8dp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="lulama"
+                android:textSize="14sp"
+                android:layout_margin="8dp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hopewell"
+                android:textSize="14sp"
+                android:layout_margin="8dp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <!-- Long Description for Team Members -->
+        <TextView
+            android:id="@+id/txtMemberDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our team consists of dedicated individuals with diverse skills and backgrounds, each playing a pivotal role in creating this platform. Eneto is the lead developer with expertise in full-stack development. Hopewell  manages the design and user experience, ensuring a seamless and intuitive interface. Lulama oversees operations, ensuring everything runs smoothly. Together, we are committed to delivering the best event booking experience for our users."
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <!-- Social Media Icons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:id="@+id/instagramIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logos"/>
+
+            <ImageView
+                android:id="@+id/youtubeIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logos"
+            android:layout_margin="8dp"/>
+
+            <!-- Add more icons as needed -->
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

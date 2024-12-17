@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "243155859998",
+    "firebase_url": "https://project-will-f5480-default-rtdb.firebaseio.com",
+    "project_id": "project-will-f5480",
+    "storage_bucket": "project-will-f5480.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243155859998:android:199d3cdc40302bae7c4c0f",
+        "android_client_info": {
+          "package_name": "com.example.EventHub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGRIq4yQV7rHl4z8D8JtgCVI9RawXWDTo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cardpayment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#004F2D">
+
+            <ImageView
+                android:id="@+id/nedbankLogo"
+                android:layout_width="80dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/logonedbank"
+                android:contentDescription="Nedbank Logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cardType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="GOLD"
+                android:textColor="#FFD700"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/nedbankLogo"
+                app:layout_constraintTop_toBottomOf="@+id/nedbankLogo" />
+
+            <TextView
+                android:id="@+id/cardNumberDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="**** **** **** ****"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/cardNumberInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Card Number"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/cardNumberError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/cardNumberInput"
+        app:layout_constraintStart_toStartOf="@+id/cardNumberInput"
+        app:layout_constraintEnd_toEndOf="@+id/cardNumberInput" />
+
+    <EditText
+        android:id="@+id/amountInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Amount"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/cardNumberInput"
+        app:layout_constraintStart_toStartOf="@+id/cardNumberInput"
+        app:layout_constraintTop_toBottomOf="@+id/cardNumberError" />
+
+    <EditText
+        android:id="@+id/cvvInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="CVV"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/dateInput"
+        app:layout_constraintStart_toStartOf="@+id/amountInput"
+        app:layout_constraintTop_toBottomOf="@+id/amountInput" />
+
+    <TextView
+        android:id="@+id/cvvError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/cvvInput"
+        app:layout_constraintStart_toStartOf="@+id/cvvInput"
+        app:layout_constraintEnd_toEndOf="@+id/cvvInput" />
+
+    <EditText
+        android:id="@+id/dateInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="MM/YY"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@+id/amountInput"
+        app:layout_constraintStart_toEndOf="@+id/cvvInput"
+        app:layout_constraintTop_toTopOf="@+id/cvvInput" />
+
+    <TextView
+        android:id="@+id/dateError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/dateInput"
+        app:layout_constraintStart_toStartOf="@+id/dateInput"
+        app:layout_constraintEnd_toEndOf="@+id/dateInput" />
+
+    <EditText
+        android:id="@+id/postalCodeInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Postal Code"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/amountInput"
+        app:layout_constraintStart_toStartOf="@+id/amountInput"
+        app:layout_constraintTop_toBottomOf="@+id/cvvError" />
+
+    <TextView
+        android:id="@+id/postalCodeError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/postalCodeInput"
+        app:layout_constraintStart_toStartOf="@+id/postalCodeInput"
+        app:layout_constraintEnd_toEndOf="@+id/postalCodeInput" />
+
+    <Button
+        android:id="@+id/payButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Pay Now"
+        app:layout_constraintEnd_toEndOf="@+id/postalCodeInput"
+        app:layout_constraintStart_toStartOf="@+id/postalCodeInput"
+        app:layout_constraintTop_toBottomOf="@+id/postalCodeError" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
